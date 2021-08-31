@@ -20,7 +20,7 @@ const MealDetails = () => {
         const ingredients = Array(20).fill(1).reduce((acc, elem, idx) => {
             const ingredients = meal[`strIngredient${idx + 1}`]
             return ingredients? [...acc, ingredients] : acc
-        }, [])
+        }, [id])
 
         return (
             <div className='container'>
