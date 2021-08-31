@@ -1,11 +1,9 @@
 import React from 'react'
-import Meals from './Meals'
-import MealDetails from "./MealDetails";
-import Dishes from "./Dishes";
-import Drinks from './Drinks'
-import Ingredients from './Ingredients'
+import Meals from './Meals/Meals'
+import MealDetails from './components/MealDetails/MealDetails'
+import Ingredients from "./components/Ingredients/Ingredients";
 import './style.css'
-import Search from './Search'
+import Browse from './components/Browse/Browse'
 import {BrowserRouter as Router, Route} from "react-router-dom";
 
 function App() {
@@ -16,10 +14,10 @@ function App() {
       // <Dishes />
      <Router>
          {/*<Route exact path ='/'> <Meals /></Route>*/}
-      <Route exact path ='/'><Drinks /></Route>
-      {/*<Route path ='/meal-details/:id/'><MealDetails /></Route>*/}
+      <Route exact path ='/'><Meals /></Route>
+      <Route path ='/meal-details/:id/'><MealDetails /></Route>
       <Route path ='/ingredients/:id/'><Ingredients /></Route>
-      <Route path ='/search/:all/'><Search /></Route>
+      <Route path ='/browse/:all/'><Browse /></Route>
      </Router>
   );
 }

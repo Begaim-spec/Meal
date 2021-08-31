@@ -9,6 +9,7 @@
 //     useEffect(() => {
 //         axios('https://gist.githubusercontent.com/juravlevdima/b239931140d1c3ae402a87b130f2caa6/raw/e24b8949ca43ae54c73aeadd80d402c7d26b1cf3/food.json')
 //             .then(({data}) => {
+//
 //                 const title = data.find(elem => elem.id === params.id)
 //                 setMeal(title)
 //             })
