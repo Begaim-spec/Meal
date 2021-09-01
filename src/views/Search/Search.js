@@ -3,7 +3,7 @@ import {useHistory} from "react-router-dom";
 import axios from "axios";
 
 const Search = () => {
-    const [meals, setMeals] = useState([])
+    const [setMeals] = useState([])
     const [find, setFind] = useState('')
     const history = useHistory()
 
