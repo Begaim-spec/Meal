@@ -10,17 +10,20 @@ const MealDetails = () => {
         const {id} = useParams()
 
 
-        useEffect(async () => {
-            const {data: {meals}} = await axios(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`)
-            setMeal(meals[0])
-            const string = meals[0].strYoutube
-            setYoutube(string.slice(string.indexOf('v=') + 2, string.length))
+        useEffect( () => {
+            const fetchData = async () => {
+                const {data: {meals}} = await axios(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`)
+                setMeal(meals[0])
+                const string = meals[0].strYoutube
+                setYoutube(string.slice(string.indexOf('v=') + 2, string.length))
+            }
+            fetchData()
         }, [id])
-
         const ingredients = Array(20).fill(1).reduce((acc, elem, idx) => {
             const ingredients = meal[`strIngredient${idx + 1}`]
-            return ingredients? [...acc, ingredients] : acc
+            return ingredients ? [...acc, ingredients] : acc
         }, [id])
+
 
         return (
             <div className='container'>
