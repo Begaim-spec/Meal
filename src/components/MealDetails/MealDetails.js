@@ -3,6 +3,7 @@ import axios from 'axios'
 import {Link} from "react-router-dom";
 import {useParams} from 'react-router-dom'
 import IngredientsList from "../../components/IngredintsList/IngredientsList";
+import Layout from "../Layout";
 
 const MealDetails = () => {
         const [meal, setMeal] = useState({})
@@ -26,24 +27,26 @@ const MealDetails = () => {
 
 
         return (
-            <div className='container'>
-                <div className='main-box'>
+            <Layout>
+                <div className='main-box container '>
                     <Link to='/'>Go back</Link>
                     <div className="ing-box">
-                        <img src={meal.strMealThumb} alt=""/>
+                        <img src={meal.strMealThumb} alt="" className='meal-img'/>
                     </div>
-                    <div className="ing-box description">
-                        <div className='ing-title'>{meal.strMeal}</div>
-                        <div className='instructions'>{meal.strInstructions}</div>
+                    <div className="ing-box">
                         <iframe width='560' height='315' src={`https://www.youtube.com/embed/${youTube}`}
                                 title='YouTube video player' frameBorder='0'
                                 allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope'
                                 allowFullScreen>m
                         </iframe>
                     </div>
+                    <div className="ing-box description">
+                        <div className='ing-title'>{meal.strMeal}</div>
+                        <div>{meal.strInstructions}</div>
+                    </div>
                 </div>
                 <IngredientsList ingredients={ingredients}/>
-            </div>
+            </Layout>
         )
     }
 ;

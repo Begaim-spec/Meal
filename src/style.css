@@ -11,9 +11,6 @@ body{
     margin: 0 15px;
 
 }
-a{
-    text-decoration: none;
-}
 .img{
     border-radius: 10px;
 }
@@ -36,9 +33,22 @@ img{
 .box{
     margin: 10px 20px;
 }
+link{
+    text-decoration: none !important;
+}
 .title{
     padding: 10px;
+    text-decoration: white;
+    color: black;
+    text-underline: none;
 }
+.meal-img{
+    width: 550px;
+    height: 300px;
+    margin-bottom: 20px;
+}
+
+
 .ing-title{
     font-size: 24px;
     font-weight: bolder;
@@ -59,13 +69,12 @@ img{
 }
 .ing-box{
     margin: 20px;
-    border: 2px solid #e2d0d0;
     padding: 20px;
     border-radius: 20px;
     text-align: center;
 }
 .ing-box:hover{
-    border-color: turquoise;
+    border-color: gray;
     color: darkcyan;
 }
 .search{

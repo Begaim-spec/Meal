@@ -9,11 +9,7 @@ import {BrowserRouter as Router, Route} from "react-router-dom";
 function App() {
 
   return (
-      // <Drinks />
-     // <Ingredients/>
-      // <Dishes />
      <Router>
-         {/*<Route exact path ='/'> <Meals /></Route>*/}
       <Route exact path ='/'><Meals /></Route>
       <Route path ='/meal-details/:id/'><MealDetails /></Route>
       <Route path ='/ingredients/:id/'><Ingredients /></Route>

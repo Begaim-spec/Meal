@@ -3,6 +3,7 @@ import axios from 'axios'
 import {Link} from "react-router-dom";
 import {useParams} from 'react-router-dom'
 import MealsList from "../MealsList/MealsList";
+import Layout from "../Layout";
 
 const Ingredients = () => {
     const [ingredients, setIngredients] = useState([])
@@ -13,15 +14,15 @@ const Ingredients = () => {
             .then(({data}) => console.log(setIngredients(data.meals)))
     }, [params.id])
     return (
-        <div className='container'>
+        <Layout className='container'>
             <div className='main-box'>
-                <Link to='/'>Go back</Link>
                 <img src={`https://www.themealdb.com/images/ingredients/${params.strMealThumb}.png`} alt=""/>
             </div>
             <div className='row'>
                <MealsList meals={ingredients}/>
+                <Link to='/'>Go back</Link>
             </div>
-        </div>
+        </Layout>
     )
 };
 export default Ingredients;
