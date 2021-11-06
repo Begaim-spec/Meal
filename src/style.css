@@ -43,8 +43,8 @@ link{
     text-underline: none;
 }
 .meal-img{
-    width: 550px;
-    height: 300px;
+    width: 450px;
+    height: 400px;
     margin-bottom: 20px;
 }
 
@@ -56,6 +56,7 @@ link{
 }
 .main-box{
     margin-top: 60px;
+    overflow-x: hidden;
 }
 .description{
     margin: 20px 70px;

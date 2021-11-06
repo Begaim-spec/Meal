@@ -3,7 +3,7 @@ import axios from 'axios'
 import {useParams} from 'react-router-dom'
 import {Link} from 'react-router-dom'
 import MealsList from "../MealsList/MealsList";
-import ErrorImg from '../../images/img.png'
+import Layout from "../Layout";
 
 const Browse = () => {
     const [search, setSearch] = useState([])
@@ -18,11 +18,11 @@ const Browse = () => {
 
     })
     return (
-        <div className='container'>
+        <Layout>
             <Link className="btn btn-outline-dark mt-3" to='/' >Home</Link>
             <p>{error}</p>
             <MealsList meals={search}/>
-        </div>
+        </Layout>
     );
 };
 

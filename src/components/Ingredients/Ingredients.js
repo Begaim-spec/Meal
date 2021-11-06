@@ -14,13 +14,13 @@ const Ingredients = () => {
             .then(({data}) => console.log(setIngredients(data.meals)))
     }, [params.id])
     return (
-        <Layout className='container'>
-            <div className='main-box'>
+        <Layout>
+            <div className='main-box container'>
                 <img src={`https://www.themealdb.com/images/ingredients/${params.strMealThumb}.png`} alt=""/>
-            </div>
-            <div className='row'>
-               <MealsList meals={ingredients}/>
-                <Link to='/'>Go back</Link>
+                <div className='row'>
+                    <MealsList meals={ingredients}/>
+                    <Link to='/'>Go back</Link>
+                </div>
             </div>
         </Layout>
     )
